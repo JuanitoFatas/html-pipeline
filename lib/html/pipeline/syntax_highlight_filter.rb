@@ -23,7 +23,7 @@ module HTML
           next if html.nil?
 
           node.inner_html = html
-          klass = node['class']
+          klass = node['class'] || "highlight"
           scope = context[:scope] || "highlight-#{lang}"
           klass = [klass, scope].compact.join ' '
 
